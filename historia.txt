@@ -70,3 +70,18 @@ git commit  -m "Añadida v3"
 
 #volvemos a la anterior rama
 git reset --hard R2
+
+#añadimos nuevos comandos y lo guardamos
+git add .
+git commit  -m Corregido error v3"
+
+#Hacemos una etiqueta
+git tag -a R3 -m "Versión R3: Corrección del error de la v3"
+
+#cambios en historial.txt
+git add .
+git commit -m "Cambios historial v3"
+
+#Push la rama principal y los tags a un repositorio en Github
+git push origin main
+git push origin --tags
