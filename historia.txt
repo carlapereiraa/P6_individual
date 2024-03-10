@@ -19,3 +19,41 @@ git commit -m "Agregada estructura de carpetas"
 
 #añadimos el historial de comandos hasta ahora, modificando el archivo con los comentarios explicativos necesarios.
 cat ~/.bash_history >> historia.txt
+
+#Creamos etiqueta
+git tag -a R1 -m "Versión R1: estructura base de carpetas"
+
+#comprobamos que estamos en main
+git checkout main
+
+# Creamos y nos movemos a una nueva rama "Mejoras"
+git checkout -b Mejoras
+
+# copiamos el pdf conlas sugerencias
+cp /c/Users/Carla/Downloads/DP_ControldeCambios_Grupo4-v1_con_anotaciones.pdf Procesos/ControlDeCambios/
+
+#añadimos la version 2 mejorada
+cp /c/Users/Carla/Downloads/DP_ControldeCambios_Grupo4-v2.pdf Procesos/ControlDeCambios/
+
+#nos movemos a la rama principal
+git checkout main
+
+# Unimos las ramas
+git merge Mejoras
+
+#eliminamos la rama Mejoras
+git branch -d Mejoras
+
+#eliminamos el pdf
+cd Procesos/ControlDeCambios/
+rm DP_ControldeCambios_Grupo4-v1_con_anotaciones.pdf
+
+#añadimos los cambios al área de preparación
+git add .
+
+# se realiza el commit de la v2 con mensaje explicativo
+ git commit -m "Mejora de control hecha: v2"
+
+#comentamos el historial y añadimos nuevos comandos y lo guardamos
+git add .
+git commit  -m "Historial de v2 añadido"
