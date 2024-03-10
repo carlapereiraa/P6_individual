@@ -57,3 +57,16 @@ git add .
 #comentamos el historial y añadimos nuevos comandos y lo guardamos
 git add .
 git commit  -m "Historial de v2 añadido"
+
+#añadimos tag de la version 2
+git tag -a R2 -m "Versión R2: Actualización v2 realizada"
+
+#añadimos v3 y eliminamos versiones anteriores en el sistema de archivos
+cp /c/Users/Carla/Downloads/DP_ControldeCambios_Grupo4-v3.docx Procesos/ControlDeCambios/
+
+#añadimos nuevos comandos y lo guardamos
+git add .
+git commit  -m "Añadida v3"
+
+#volvemos a la anterior rama
+git reset --hard R2
