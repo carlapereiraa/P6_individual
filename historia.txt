@@ -85,3 +85,11 @@ git commit -m "Cambios historial v3"
 #Push la rama principal y los tags a un repositorio en Github
 git push origin main
 git push origin --tags
+
+
+#comprobamos que el repositorio local esta actualizado
+git pull origin main
+
+
+#queremos saber la diferencia entre historia.txt 
+git diff historia.txt
