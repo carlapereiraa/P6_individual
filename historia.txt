@@ -93,3 +93,6 @@ git pull origin main
 
 #queremos saber la diferencia entre historia.txt 
 git diff historia.txt
+
+#mandamos al repostiorio
+git push origin main
