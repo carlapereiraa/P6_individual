@@ -1,0 +1,21 @@
+#clonamos el repositorio
+git clone https://github.com/carlapereiraa/P6_individual.git
+
+#entramos en el respositorio ya en local
+cd P6_individual/
+
+#Creamos las carpetas y desde el sistema de archivos metemos los archivos correspondientes, historia.txt, control de versiones y las plantillas
+mkdir Proyectos
+mkdir Proyectos/Prj1
+mkdir Procesos/ControlDeCambios
+mkdir Procesos
+mkdir Procesos/ControlDeCambios
+
+#añadimos los cambios al área de preparación
+git add .
+
+# guardamos los cambios en el historial de cambios con un mensaje explicativo
+git commit -m "Agregada estructura de carpetas"
+
+#añadimos el historial de comandos hasta ahora, modificando el archivo con los comentarios explicativos necesarios.
+cat ~/.bash_history >> historia.txt
